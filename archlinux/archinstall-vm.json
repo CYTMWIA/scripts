@@ -18,10 +18,11 @@
         "fcitx5-qt",
         "firefox",
         "git",
-        "vim","man-db",
+        "man-db",
+        "open-vm-tools",
+        "vim",
         "wqy-bitmapfont",
-        "wqy-zenhei",
-        "open-vm-tools"
+        "wqy-zenhei"
     ],
     "services": [
         "docker.service",
