@@ -9,11 +9,17 @@
 (function() {
     'use strict';
 
+    let title = document.title
     setInterval(function(){
-        let re = /\[.*?\]\(.*?\)/
+        let re = /\[(.*?)\]\((.*?)\)/
         let res = re.exec(document.title)
-        if (!res) {
-            document.title = `[${document.title}](${window.location})`
+        if (res) {
+            if (window.location!==res[2]) {
+                document.title = `[${title}](${window.location})`
+            }
+        } else {
+            title = document.title
+            document.title = `[${title}](${window.location})`
         }
     },500)
 
